@@ -1,5 +1,5 @@
-# Software2
-Proyecto de Software2
+# Parcial 2 - Ingenieria de Software 2
+Prototipo funcional - PersonalPay
 
 Pagina Principal con un poco de informacion:
 ![image](https://github.com/user-attachments/assets/b2ea3d0c-6e60-49fc-86f3-2e8d59989ff0)
