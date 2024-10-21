@@ -129,6 +129,38 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
+@app.route('/profile')
+@login_required
+def profile():
+    # Consulta SQL para traer el perfil del usuario logueado
+    cursor = db.connection.cursor()
+    cursor.execute("SELECT * FROM user WHERE id = %s", (current_user.id,))
+    user_data = cursor.fetchone()
+    cursor.close()
+
+    print(user_data)
+    if user_data:
+        # Crear el objeto `User` con los datos traídos desde la base de datos
+        user = User(
+            user_data[0],               # id
+            user_data[1],               # fullname
+            user_data[2],               # username (email)
+            user_data[3],              # password
+            user_data[4],               # rut
+            user_data[5],               # profesion
+            user_data[6],               # cargo
+            user_data[7],               # jornada
+            float(user_data[8]),               # sueldo
+            user_data[9],               # fechaNacimiento
+            user_data[10]                # descuentos
+        )
+
+        # Renderiza la plantilla `profile.html` con la información del usuario
+        return render_template('profile.html', menu_items=menu_items, user=user)
+    else:
+        flash("No se pudo cargar el perfil", "danger")
+        return redirect(url_for('layout'))
+    
 def status_401(error):
     return redirect(url_for('login'))
 
