@@ -20,4 +20,4 @@ El cambio de metodo de pago:
 ![image](https://github.com/user-attachments/assets/1f371fdb-d5e9-45f1-95e8-487182c36e81)
 
 Perfil de Usuario:
-![image](https://github.com/user-attachments/assets/36b21e5e-76dc-4d76-9de2-581c084ced3b)
+![image](https://github.com/user-attachments/assets/db7da0d2-a9cd-4da5-b022-17fcd3ae8b07)
