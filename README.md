@@ -11,13 +11,14 @@ El sistema de Registro:
 ![image](https://github.com/user-attachments/assets/4f9ed754-f5bd-473f-9353-67dc121b330a)
 
 La lista de Cotizaciones:
-![image](https://github.com/user-attachments/assets/6b23ce64-a55c-471c-b896-a92fad633db0)
+![image](https://github.com/user-attachments/assets/7ceb8dab-d661-4c40-83e8-b1e3276f3882)
 
 La lista de días trabajados:
-![image](https://github.com/user-attachments/assets/9621d26f-5454-436b-987e-267497fb4cd3)
+![image](https://github.com/user-attachments/assets/53361404-65c9-49e4-88cd-c73aa7cc12a9)
 
 El cambio de metodo de pago:
-![image](https://github.com/user-attachments/assets/1f371fdb-d5e9-45f1-95e8-487182c36e81)
+![image](https://github.com/user-attachments/assets/d38ed459-192b-4d13-b0cd-91a8d05918e0)
 
 Perfil de Usuario:
-![image](https://github.com/user-attachments/assets/db7da0d2-a9cd-4da5-b022-17fcd3ae8b07)
+![image](https://github.com/user-attachments/assets/fef724d1-a97c-4a27-9bd7-727a8ee22475)
+
