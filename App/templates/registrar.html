@@ -1,8 +1,51 @@
 {% extends 'layout.html' %}
 
-{% block title %}Inicio - Personal Pay{% endblock %}
+{% block title %}Register - Personal Pay{% endblock %}
+{% block css %}<link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">{% endblock %}
 
+{% block register%}{% endblock %}
 {% block content %}
-    <h1>Bienvenido a Personal Pay</h1>
-    <p>Esta es la página principal del sistema de pagos.</p>
+<div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <div class="card">
+                <h5 class="text-center mb-4">Registro de Empleado</h5>
+                <form class="form-card" method="POST" action="/register">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Nombre<span class="text-danger"> *</span></label> <input type="text" id="name" name="name" placeholder="Ingrese su Nombre" onblur="validate(1)"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Rut<span class="text-danger"> *</span></label> <input type="text" id="rut" name="rut" placeholder="Ingrese su Rut" onblur="validate(2)"> </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Profesión<span class="text-danger"> *</span></label> <input type="text" id="profesion" name="profesion" placeholder="Ingrese su profesión" onblur="validate(3)"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Cargo<span class="text-danger"> *</span></label> <input type="text" id="cargo" name="cargo" placeholder="Ingrese su Cargo" onblur="validate(4)"> </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Jornada de Trabajo<span class="text-danger"> *</span></label> <input type="text" id="jornada" name="jornada" placeholder="Ingrese su jornada" onblur="validate(5)"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Ingrese su Sueldo<span class="text-danger"> *</span></label> <input type="text" id="sueldo" name="sueldo" placeholder="Ingrese su Sueldo" onblur="validate(6)"> </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Fecha de Nacimiento<span class="text-danger"> *</span></label> <input type="date" id="fecha" name="fecha" placeholder=""> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Email<span class="text-danger"> *</span></label> <input type="email" id="email" name="email" placeholder="Ingrese su Correo" onblur="validate(8)"></div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-12 flex-column d-flex"> <label class="form-control-label px-3">Descuentos Adicionales<span class="text-danger"> *</span></label> <input type="text" id="descuentos" name="descuentos" placeholder="Descuentos" onblur="validate(7)"> </div>
+                    </div>
+
+                    <div class="d-flex justify-content-around align-items-center mb-4">
+                        <!-- Checkbox -->
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="check"/>
+                          <label class="form-check-label" for="checkbox"> Aceptar Términos y Condiciones </label>
+                        </div>
+                      </div>
+                    <div class="d-flex justify-content-around align-items-center mb-4">
+                        <div class="form-group col-sm-6"> <button type="submit" id="envio" class="btn btn-primary" disabled>Crear Cuenta</button> </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
+{% block js %} <script src="{{ url_for('static', filename='js/registro.js') }}"></script> {% endblock %}

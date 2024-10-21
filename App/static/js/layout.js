@@ -14,3 +14,6 @@ document.getElementById('cotizaciones').addEventListener('click', function() {
 document.getElementById('imprimirLiquidacion').addEventListener('click', function() {
     alert('Imprimir Liquidación');
 });
+
+
+
