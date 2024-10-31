@@ -19,7 +19,7 @@ login_manager_app = LoginManager(app)
 
 menu_items = [
     {"name": "Elegir Método de Pago", "url": "metodoPago", "disabled": False},
-    {"name": "Revisar Información Empleado", "url": "#", "disabled": False},
+    {"name": "Revisar Información Empleado", "url": "profile", "disabled": False},
     {"name": "Revisar Días Trabajador", "url": "dias", "disabled": False},
     {"name": "Revisar Cotizaciones", "url": "cotizacion", "disabled": False},
     {"name": "Imprimir Liquidación", "url": "#", "disabled": False},
